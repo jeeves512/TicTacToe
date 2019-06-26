@@ -1,0 +1,39 @@
+/**
+ See: CSS Variables
+ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+**/
+:root {
+  --board-size: 400px;
+  --margin-size: 7px;
+  --square-size: calc(var(--board-size)/3 - var(--margin-size))
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+#board {
+  background: rgba(0,0,0,0.5);
+  height: var(--board-size);
+  width: var(--board-size);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+#board div {
+  background-color: white;
+  height: var(--square-size);
+  width: var(--square-size);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#board div img {
+  width: 100%;
+}
